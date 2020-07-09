@@ -21,3 +21,12 @@ else if (randomNumber1 > randomNumber2){
 else if (randomNumber2 > randomNumber1){
     document.querySelector(".container h1").innerHTML="Player 2 Wins!";
 }
+
+let port = process.env.PORT;
+if (port == null || port == ""){
+    port = 3000;
+}
+
+app.listen(port, function() {
+    console.log("Server started successfully");
+});
